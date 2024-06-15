@@ -1,4 +1,4 @@
-# SpeechPro
+# Sign Language to Text and Speech Converter
 
 This project is a web application that converts sign language gestures into text and speech. The application uses a convolutional neural network (CNN) model to recognize sign language gestures from images and provides the corresponding text and speech output in English or Hindi.
 
@@ -37,12 +37,20 @@ This project is a web application that converts sign language gestures into text
     pip install -r requirements.txt
     ```
 
-3. Start the Flask server:
+3. Generate the `X_train.npy` and `y_train.npy` files:
+    - Run the `prepare_data.py` script to generate the training data files.
+    - Ensure you have the necessary data to generate these files.
+
+    ```bash
+    python prepare_data.py
+    ```
+
+4. Start the Flask server:
     ```bash
     python app.py
     ```
 
-4. Open `index.html` in your browser.
+5. Open `index.html` in your browser.
 
 ### Usage
 1. Upload an image of a sign language gesture.
@@ -53,7 +61,8 @@ This project is a web application that converts sign language gestures into text
 - `app.py`: Flask server and main application logic.
 - `index.html`: Front-end HTML file.
 - `styles.css`: CSS styles for the front-end.
-- `models/sign_language_model.h5`: Pre-trained model for sign language recognition.
+- `prepare_data.py`: Script to generate training data.
+- `train_model.py`: Script to train the model.
 - `requirements.txt`: List of Python dependencies.
 
 ## Acknowledgements
